@@ -1,64 +1,95 @@
 /* - - - H A B E R L E R - - - */
 .haberler-menu{
     display: flex;
-    justify-content: space;
-    align-items: center;
+    justify-content: space-around; /* Düzelttim: space yerine space-around */
     align-items: center;
     width: 100%;
-    height: 44px;
-    background-color: #dfdfdf;
-    border-radius: 3px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: background 0.3s;
 }
-  
+
 .haberler-menu span{
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.haberler-menu span:hover{
-    background-color: #efefef;
-    border-bottom: 2px solid black;
-    font-weight: bold;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.haber-active{
-    background-color: #efefef;
-    border-bottom: 2px solid black;
+.haberler-menu span:hover{
+    background-color: #007bff;
+    color: white;
+    border-bottom: 3px solid #0056b3;
+    transform: translateY(-2px);
     font-weight: bold;
 }
 
-/* - - - H A B E R L E R - - - */
+.haber-active{
+    background-color: #007bff;
+    color: white;
+    border-bottom: 3px solid #0056b3;
+    font-weight: bold;
+}
 
+/* - - - H A B E R KARTLARI - - - */
 .haberler{
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: 15px auto 5px auto;
+    margin: 20px auto;
+    gap: 15px;
 }
 
 .haberler .haber{
     display: flex;
-    border: 1px solid #afafaf;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    flex-direction: row;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.haberler .haber:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .haber img{
-    padding: 5px;
-    height: max-content;
-    border-radius: 10px;
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 0.3s;
+}
+
+.haber img:hover{
+    transform: scale(1.05);
 }
 
 .haber .haber-content{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 0 4px 0 8px;
+    padding: 10px 15px;
+    gap: 5px;
 }
 
+.haber .haber-content h3{
+    font-size: 18px;
+    color: #0E3150;
+}
 
-
+.haber .haber-content p{
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
