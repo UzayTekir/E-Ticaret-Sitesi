@@ -1,54 +1,98 @@
 /* - - - H E A D E R - - - */
 .my-header{
-    padding: 5px 0 5px 0;
+    padding: 10px 20px;
+    background-color: #0E3150;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .my-header .header-user{
-    margin-right: 0px;
-}
-
-.my-header .header-logo{
-    margin-left: 0px;
+    display: flex;
+    align-items: center;
 }
 
 .my-header .header-user i{
-    margin-right: 2px;
+    margin-right: 5px;
 }
 
-/* - - - S I D E   B A R  &  C O N T E N T - - - */
+.my-header .header-logo{
+    font-size: 24px;
+    font-weight: 600;
+}
 
+/* - - - S I D E B A R & C O N T E N T - - - */
 .container{
+    display: flex;
     width: 100%;
+    gap: 20px; /* Sidebar ve content arası boşluk */
+    padding: 20px;
 }
 
 .container .sidebar{
     width: 30%;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container .sidebar:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* - - - Content - - -*/
-
 .container .content-item{
     width: 70%;
-    height: 1000px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container .content-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* - - - H A B E R L E R - - -*/
 .haberler .haber{
-    flex-direction: column;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.haberler .haber:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .haber img{
+    width: 100%;
+    height: auto;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-
 /* - - - D E T A I L - - - */
-
 .detail-box .item{
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .item .item-side-detail{
-    padding-left: 0px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
