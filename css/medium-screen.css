@@ -1,113 +1,103 @@
-/* - - - H E A D E R - - - */
+/* - - - HEADER - - - */
 .my-header{
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .my-header .header-menu{
     width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.my-header .header-menu a{
+    transition: all 0.3s ease;
+}
+
+.my-header .header-menu a:hover{
+    transform: translateY(-2px);
+    color: #00509e;
 }
 
 .my-header .header-user i{
-    margin-right: 10px;
+    transition: all 0.3s ease;
 }
 
-.my-header .header-user{
-    width: 100%;
-    justify-content: space-around;
-    margin-right: 5px;
-    padding: 10px 0 10px 0;
+.my-header .header-user i:hover{
+    color: #00509e;
+    transform: scale(1.2);
 }
 
-/* - - - S I D E   B A R  &  C O N T E N T - - - */
-
-.container{
-    flex-direction: column;
-}
-
-.container .sidebar{
-    width: 100%;
-}
-
+/* - - - SIDEBAR - - - */
 .container .sidebar ul li span{
-    padding: 5px 20px 5px 20px;
+    transition: all 0.3s ease;
 }
 
-.main-ul{
-    display: none;
+.container .sidebar ul li:hover span{
+    background: linear-gradient(90deg, #0E3150, #3f508f);
+    color: white;
+    transform: translateX(5px);
 }
 
+/* Kategoriler toggle */
 #kategoriler{
-    color: #007bff;
+    transition: all 0.3s ease;
 }
 
 #kategoriler:hover{
     cursor: pointer;
+    color: #00509e;
 }
 
-
-/* - - - Content - - -  */
-
+/* - - - CONTENT - - - */
 .container .content{
     width: 100%;
+    padding: 10px;
 }
 
-
-/* - - - F O O T E R - - - */
-
+/* - - - FOOTER - - - */
 .my-footer .footer-content{
     flex-wrap: wrap;
+    gap: 15px;
 }
 
-.my-footer .footer-content .footer-logo{
-    width: 50%;
+.my-footer .footer-content a{
+    transition: all 0.3s ease;
 }
 
-.my-footer .footer-content .footer-menu {
-    width: 50%;
-    flex-direction: row;
-    justify-content: space-around;
+.my-footer .footer-content a:hover{
+    color: #fdc500;
+    transform: scale(1.05);
 }
 
-.my-footer .footer-content .footer-user{
-    width: 50%;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.my-footer .footer-content .footer-social-media{
-    width: 50%;
-}
-
-
-/* - - - İ L E T İ Ş İ M - - - */
+/* - - - CONTACT / MAP - - - */
 .contact{
-    display: flex;
-    flex-direction: column;
-    margin:5px 0 10px 5px;
-    padding: 10px;
-    width: 100%;
-    height: fit-content;
-    border: 1px solid #dfdfdf;
-    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.contact .info{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
+.contact:hover{
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
 }
 
-.contact .info h4{
-    margin-top: 10px;
+.map{
+    transition: all 0.3s ease;
 }
 
-.map {
-    margin: 20px auto 0 auto;
-    height: 400px;
-    width: 90%;
+.map:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* - - - R E K L A M  - - -*/
+/* - - - AD CONTAINER - - - */
 .ad-container{
     width: 100%;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.ad-container:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
